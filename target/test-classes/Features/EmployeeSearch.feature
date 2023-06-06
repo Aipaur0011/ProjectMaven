@@ -28,3 +28,4 @@ Feature: Searching the employee
     And user see employee information is displayed
 
  # Background: This is used to define all the common steps that multiple
+   #             scenarios have in the same feature file, till the time flow is not broken

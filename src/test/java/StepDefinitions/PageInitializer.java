@@ -1,7 +1,7 @@
-package Steps;
+package StepDefinitions;
 
-import Pages.AddEmployeePage;
-import Pages.LoginPage;
+import PageDefinations.AddEmployeePage;
+import PageDefinations.LoginPage;
 
 public class PageInitializer {
 

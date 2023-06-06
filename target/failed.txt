@@ -1,2 +1,0 @@
-file:src/test/resources/Features/Login.feature:41:44
-file:src/test/resources/Features/APIWorkFlow.feature:6:14:22:33:41

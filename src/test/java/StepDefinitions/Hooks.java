@@ -1,4 +1,4 @@
-package Steps;
+package StepDefinitions;
 
 import Utils.CommonMethods;
 import io.cucumber.java.After;

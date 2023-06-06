@@ -1,7 +1,8 @@
 package Utils;
 
-import Steps.PageInitializer;
+import StepDefinitions.PageInitializer;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,6 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -54,7 +54,15 @@ public class CommonMethods extends PageInitializer {
         driver.get(ConfigReader.getPropertyValue("url"));
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(Constants.WAIT_TIME));
         initializePageObjects();//this will initialize all the pages we have in our Page folder
+
+        //PageInitializer class along with the launching of application
+        // To configure the File and pattern it has
+        DOMConfigurator.configure("log4j.xml");
+        Log.startTestCase("This is the beginning of my Test case");
+        Log.info("My test case is executing right now");
+        Log.warning("My test case might have some trivial issues");
     }
+
 
 
     public static void closeBrowser() {
@@ -96,6 +104,9 @@ public class CommonMethods extends PageInitializer {
             }
         }
     }
+
+    //====================SCREENSHOT==================
+
 
     public static byte[] takeScreenShot(String imageName){
 

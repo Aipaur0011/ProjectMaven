@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="@target/failed.txt",
-        glue="Steps",
+        glue= "StepDefinitions",
         plugin = {"pretty"})
 
 public class FailRunner {

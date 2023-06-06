@@ -1,5 +1,4 @@
 package APIStepDef;
-
 import Utils.APIConstants;
 import Utils.APIPayloadConstants;
 import io.cucumber.datatable.DataTable;
@@ -13,8 +12,9 @@ import org.junit.Assert;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.equalTo;
 
 public class APIWorkflowSteps {
 
@@ -22,7 +22,7 @@ public class APIWorkflowSteps {
     Response response;
     public static String employee_id;
 
-    //making a request with usual payload
+    //making a requst with usual payload
     @Given("a request is prepared to create an employee")
     public void a_request_is_prepared_to_create_an_employee() {
         request = given().
@@ -116,40 +116,42 @@ public class APIWorkflowSteps {
                 Assert.assertEquals(expectedValue, actualValue);
             }
         }
+        //------------------------------------------------------------------------------
     }
-
-    //-----------------------
 
     @Given("a request is prepared to create an employee with dynamic data {string} , {string} , {string} , {string} , {string} , {string} , {string}")
     public void a_request_is_prepared_to_create_an_employee_with_dynamic_data
-            (String firstname, String lastName, String middleName,
+            (String firstName, String lastName, String middleName,
              String gender, String birthday, String status,
              String jobTitle) {
-
         request = given().
                 header(APIConstants.HEADER_KEY_CONTENT_TYPE,
                         APIConstants.HEADER_VALUE_CONTENT_TYPE).
                 header(APIConstants.HEADER_KEY_AUTHORIZATION,
                         GenerateTokenSteps.token)
-                .body(APIPayloadConstants.createEmployeePayloadDynamic
-                        (firstname, lastName, middleName, gender, birthday, status, jobTitle));
+                .body(APIPayloadConstants.
+                        createEmployeePayloadDynamic(
+                                firstName, lastName,middleName, gender,
+                                birthday, status, jobTitle));
     }
 
-    //--------------------
+    //---------------------------------------------------------------------------
     @Given("a request is prepared to update an employee")
     public void a_request_is_prepared_to_update_an_employee() {
-        request=given().header(APIConstants.HEADER_KEY_CONTENT_TYPE,APIConstants.HEADER_VALUE_CONTENT_TYPE).
-                header(APIConstants.HEADER_KEY_AUTHORIZATION,GenerateTokenSteps.token).body(APIPayloadConstants.updateEmployeePayloadJson());
-
+        request = given().header(APIConstants.HEADER_KEY_CONTENT_TYPE,
+                        APIConstants.HEADER_VALUE_CONTENT_TYPE).
+                header(APIConstants.HEADER_KEY_AUTHORIZATION,
+                        GenerateTokenSteps.token).
+                body(APIPayloadConstants.updateEmployeePayloadJson());
     }
+
     @When("a PUT call is made to update an employee")
     public void a_put_call_is_made_to_update_an_employee() {
-        response=request.when().put(APIConstants.UPDATE_EMPLOYEE_URI);
+        response = request.when().put(APIConstants.UPDATE_EMPLOYEE_URI);
     }
+
     @Then("the status code of updated employee is {int}")
     public void the_status_code_of_updated_employee_is(Integer int1) {
-       response.then().assertThat().statusCode(int1);
+        response.then().assertThat().statusCode(int1);
     }
-
-
 }
