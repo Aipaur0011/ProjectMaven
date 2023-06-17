@@ -3,7 +3,7 @@ Feature: Searching the employee
   Background:
     When user enters valid email and valid password
     And click on login button
-    When user clicks in PIM option
+    When user clicks on PIM option
 
   @searchId
   Scenario: search employee by id

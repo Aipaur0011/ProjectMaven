@@ -74,9 +74,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>MyFirstFramework</td>
+      <td>CucumberBatch15</td>
         <td>1</td>
-      <td>18 Apr 2023, 00:47</td>
+      <td>17 Jun 2023, 03:07</td>
     </tr>
   </tbody>
 </table>
@@ -130,8 +130,8 @@ $(document).ready(function() {
         <tr>
           <td class="tagname">@searchId</td>
           <td >0</td>
-          <td >0</td>
-          <td     class="skipped"   >3</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">3</td>
@@ -140,7 +140,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="139000">0.000</td>
+          <td class="duration" data-value="26118000">0.026</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -183,7 +183,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.026</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -219,9 +219,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">Steps.Hooks.PreConditions()</span>
+              <span class="location name">StepDefinitions.Hooks.PreConditions()</span>
 
-  <span class="lead-duration duration">1.571</span>
+  <span class="lead-duration duration">2.761</span>
 
           </div>
 
@@ -254,11 +254,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">user enters valid employee id</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.026</span>
 
 </div>
 
@@ -266,6 +266,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>java.lang.IllegalArgumentException:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+	at Utils.CommonMethods.sendText(CommonMethods.java:81)
+	at StepDefinitions.EmployeeSearch.user_enters_valid_employee_id(EmployeeSearch.java:15)
+	at &#10045;.user enters valid employee id(file:///Users/aipa/IdeaProjects/MyFirstFramework/src/test/resources/Features/EmployeeSearch.feature:14)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -339,7 +355,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -351,13 +367,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">Steps.Hooks.postConditions()</span>
+              <span class="location name">StepDefinitions.Hooks.postConditions(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.109</span>
+  <span class="lead-duration duration">0.210</span>
 
           </div>
 
@@ -366,6 +382,21 @@ $(document).ready(function() {
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
+      <a>search employee by id</a>
+      <a href="embeddings/embedding_1590021011.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-6" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1590021011.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>

@@ -22,7 +22,7 @@ public class APIWorkflowSteps {
     Response response;
     public static String employee_id;
 
-    //making a requst with usual payload
+    //making a request with usual payload
     @Given("a request is prepared to create an employee")
     public void a_request_is_prepared_to_create_an_employee() {
         request = given().

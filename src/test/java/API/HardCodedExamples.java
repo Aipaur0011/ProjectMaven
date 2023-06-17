@@ -16,11 +16,11 @@ import static org.hamcrest.Matchers.*;
 public class HardCodedExamples {
 
     String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
-    String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODUyMDcwMTgsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY4NTI1MDIxOCwidXNlcklkIjoiNTI2MyJ9.AjCtpM_DKUkviiiyl664kVn3efocdfRqXkreIE8xds8";
+    String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODY4NDg4MjQsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY4Njg5MjAyNCwidXNlcklkIjoiNTQyNiJ9.AAsDsjNQH2awe0ympa5aPypnmDjygQh-5xip5bfb9E4";
     static String employee_id;
 
     @Test
-    public void bgetCreatedEmployee(){
+    public void bGetCreatedEmployee(){
         RequestSpecification preparedRequest = given().
                 header("Content-Type","application/json").
                 header("Authorization", token).
@@ -29,7 +29,7 @@ public class HardCodedExamples {
         //hitting the endpoint
         Response response = preparedRequest.when().get("/getOneEmployee.php");
         response.prettyPrint();
-        //verify the reponse
+        //verify the response
         response.then().assertThat().statusCode(200);
         String tempEmpId = response.jsonPath().getString("employee.employee_id");
         //we have 2 emp id, one is global and second is local
@@ -37,18 +37,18 @@ public class HardCodedExamples {
     }
 
     @Test
-    public void acreateEmployee(){
+    public void aCreateEmployee(){
         //prepare the request
         RequestSpecification preparedRequest = given().
                 header("Content-Type","application/json").
                 header("Authorization",token).body("{\n" +
-                        "  \"emp_firstname\": \"nelena\",\n" +
-                        "  \"emp_lastname\": \"faria\",\n" +
-                        "  \"emp_middle_name\": \"ms\",\n" +
+                        "  \"emp_firstname\": \"aiana\",\n" +
+                        "  \"emp_lastname\": \"bolot\",\n" +
+                        "  \"emp_middle_name\": \"ap\",\n" +
                         "  \"emp_gender\": \"F\",\n" +
-                        "  \"emp_birthday\": \"2012-05-20\",\n" +
-                        "  \"emp_status\": \"Confirmed\",\n" +
-                        "  \"emp_job_title\": \"Engineer\"\n" +
+                        "  \"emp_birthday\": \"2001-05-23\",\n" +
+                        "  \"emp_status\": \"confirmed\",\n" +
+                        "  \"emp_job_title\": \"engineer\"  \n" +
                         "}");
 
         //hitting the endpoint/send the request
@@ -64,18 +64,18 @@ public class HardCodedExamples {
 
         //verifying the firstname in the response body
         response.then().assertThat().
-                body("Employee.emp_firstname", equalTo("nelena"));
+                body("Employee.emp_firstname", equalTo("aiana"));
         response.then().assertThat().
-                body("Employee.emp_lastname", equalTo("faria"));
+                body("Employee.emp_lastname", equalTo("bolot"));
 
         //verify the response headers
         response.then().assertThat().header("Content-Type","application/json");
         System.out.println("My test case is passed");
     }
 
-    //in homework, create a method to get all emoloyee status and job title
+    //in homework, create a method to get all employee status and job title
     @Test
-    public void cupdateEmployee(){
+    public void cUpdateEmployee(){
         RequestSpecification preparedRequest = given().
                 header("Content-Type","application/json").
                 header("Authorization", token).body("{\n" +
@@ -91,7 +91,7 @@ public class HardCodedExamples {
 
         //hitting the endpoint
         Response response = preparedRequest.when().put("/updateEmployee.php");
-        response.then().assertThat().statusCode(200);
+        response.then().assertThat().statusCode(200); //verify status code
         //for verification
         response.then().assertThat().body("Message", equalTo("Employee record Updated"));
     }

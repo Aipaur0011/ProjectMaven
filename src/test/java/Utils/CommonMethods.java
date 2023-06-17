@@ -24,6 +24,7 @@ public class CommonMethods extends PageInitializer {
     public static WebDriver driver;
 
     public static void openBrowserAndLaunchApplication() {
+
         ConfigReader.readProperties();
         String browserType = ConfigReader.getPropertyValue("browserType");
         switch (browserType) {
@@ -32,10 +33,10 @@ public class CommonMethods extends PageInitializer {
                 ChromeOptions ops=new ChromeOptions();
                 ops.addArguments("--no-sandbox");
                 ops.addArguments("--remote-allow-origins=*");
-                if(ConfigReader.getPropertyValue("Headless").equals("true")){
+                if(ConfigReader.getPropertyValue("Headless").equals("true")) {
                     ops.addArguments("--headless=new");
-                }
 
+                }
 
                 driver = new ChromeDriver(ops);
                 break;
@@ -66,6 +67,8 @@ public class CommonMethods extends PageInitializer {
 
 
     public static void closeBrowser() {
+        Log.info("This Test Case is about to get completed");
+        Log.endTestCase("This Test Case is finished");
         driver.close();
     }
 
@@ -73,7 +76,7 @@ public class CommonMethods extends PageInitializer {
         element.click();
     }
 
-    public static void sendText(WebElement element, String text) {
+    public static void sendText(WebElement element,String text) {
         element.clear();
         element.sendKeys(text);
     }

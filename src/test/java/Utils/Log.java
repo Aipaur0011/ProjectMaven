@@ -1,6 +1,8 @@
 package Utils;
 
 import java.util.logging.Logger;
+import org.apache.log4j.*;
+import io.cucumber.java.zh_cn.那么;
 
 public class Log {
 

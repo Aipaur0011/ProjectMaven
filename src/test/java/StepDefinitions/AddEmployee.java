@@ -7,6 +7,8 @@ import Utils.GlobalVariables;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class AddEmployee extends CommonMethods {
 
@@ -87,5 +89,4 @@ public class AddEmployee extends CommonMethods {
         Assert.assertEquals(lastNamefromDB, "standart");
         System.out.println("My assertion has passed my test case");
     }
-
 }

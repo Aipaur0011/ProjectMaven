@@ -35,7 +35,7 @@ public class Login extends CommonMethods {
 
     }
 
-    @Then("user is logged in successfully into the application")
+    @Then("user is logged in successfully")
     public void user_is_logged_in_successfully() {
         //LoginPage login = new LoginPage();
         boolean userloggedIn = login.welcomeIcon.isDisplayed();

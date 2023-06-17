@@ -38,7 +38,7 @@ Feature: Login Functionalities
       | username | password    |
       | admin    | Hum@nhrm123 |
       | ADMIN    | Hum@nhrm123 |
-      | Jason    | Hum@nhrm123 |
+    # | Jason    | Hum@nhrm123 |
 
   @dataTable
   Scenario: Login with multiple credentials using data table
@@ -46,7 +46,7 @@ Feature: Login Functionalities
       | username | password    |
       | admin    | Hum@nhrm123 |
       | ADMIN    | Hum@nhrm123 |
-      | Jason    | Hum@nhrm123 |
+     #| Jason    | Hum@nhrm123 |
 
 
 

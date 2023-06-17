@@ -75,9 +75,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>MyFirstFramework</td>
+      <td>CucumberBatch15</td>
         <td>1</td>
-      <td>18 Apr 2023, 00:47</td>
+      <td>17 Jun 2023, 03:07</td>
     </tr>
   </tbody>
 </table>
@@ -117,25 +117,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3791366082.html">Employee</a>
+      <a href="report-feature_1_1716368945.html">Searching the employee</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2149473122.html">@TC2</a>
-       <a href="report-tag_4089311534.html">@smoke</a>
+       <a href="report-tag_3323159842.html">@searchId</a>
 </div>
 
 
-  <span class="lead-duration duration">1.309</span>
+  <span class="lead-duration duration">0.026</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Adding a new Employee</span>
+  <span class="name">search employee by id</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -164,9 +163,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">Steps.Hooks.PreConditions()</span>
+              <span class="location name">StepDefinitions.Hooks.PreConditions()</span>
 
-  <span class="lead-duration duration">2.954</span>
+  <span class="lead-duration duration">2.761</span>
 
           </div>
 
@@ -199,65 +198,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">user enters valid email and valid password</span>
-
-  <span class="lead-duration duration">0.152</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">click on login button</span>
-
-  <span class="lead-duration duration">1.153</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
 <div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
-  <span class="name">user clicks in PIM option</span>
+  <span class="name">user enters valid employee id</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.026</span>
 
 </div>
 
@@ -269,13 +214,14 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>java.lang.NullPointerException</a>
+          <a>java.lang.IllegalArgumentException:</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>java.lang.NullPointerException
-	at Utils.CommonMethods.doClick(CommonMethods.java:55)
-	at Steps.AddEmployee.user_clicks_in_pim_option(AddEmployee.java:17)
-	at &#10045;.user clicks in PIM option(file:///Users/aipa/IdeaProjects/MyFirstFramework/src/test/resources/Features/AddEmployee.feature:7)
+        <pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+	at Utils.CommonMethods.sendText(CommonMethods.java:81)
+	at StepDefinitions.EmployeeSearch.user_enters_valid_employee_id(EmployeeSearch.java:15)
+	at &#10045;.user enters valid employee id(file:///Users/aipa/IdeaProjects/MyFirstFramework/src/test/resources/Features/EmployeeSearch.feature:14)
 </pre>
       </div>
     </div>
@@ -297,9 +243,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
-  <span class="name">user click on add employee button</span>
+  <span class="name">Clicks on search button</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -324,7 +270,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
-  <span class="name">user enters firstname and middlename and lastname</span>
+  <span class="name">user see employee information is displayed</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -369,9 +315,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">Steps.Hooks.postConditions()</span>
+              <span class="location name">StepDefinitions.Hooks.postConditions(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.085</span>
+  <span class="lead-duration duration">0.210</span>
 
           </div>
 
@@ -380,724 +326,21 @@ $(document).ready(function() {
 
 
 
-
-        </div>
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
+      <a>search employee by id</a>
+      <a href="embeddings/embedding_1590021011.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
     </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_1_1716368945.html">Searching the employee</a>
-    </div>
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">1.279</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
-
-<div class="brief failed">
-  <span class="keyword indention">Background</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-6" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">user enters valid email and valid password</span>
-
-  <span class="lead-duration duration">0.147</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">click on login button</span>
-
-  <span class="lead-duration duration">1.131</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When failed">
-  <span class="keyword indention">When</span>
-  <span class="name">user clicks in PIM option</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
-          <a>java.lang.NullPointerException</a>
-      </div>
-      <div id="msg-8" class="collapse collapsable-details  in ">
-        <pre>java.lang.NullPointerException
-	at Utils.CommonMethods.doClick(CommonMethods.java:55)
-	at Steps.AddEmployee.user_clicks_in_pim_option(AddEmployee.java:17)
-	at &#10045;.user clicks in PIM option(file:///Users/aipa/IdeaProjects/MyFirstFramework/src/test/resources/Features/EmployeeSearch.feature:6)
-</pre>
+    <div id="embedding-6" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1590021011.png">
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
   </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_1_1716368945.html">Searching the employee</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_3323159842.html">@searchId</a>
-</div>
-
-
-  <span class="lead-duration duration">0.000</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-9">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">search employee by id</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-9" class="collapse collapsable-details  in ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-10" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">Steps.Hooks.PreConditions()</span>
-
-  <span class="lead-duration duration">1.571</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-When skipped">
-  <span class="keyword indention">When</span>
-  <span class="name">user enters valid employee id</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">Clicks on search button</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">user see employee information is displayed</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-12" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">Steps.Hooks.postConditions()</span>
-
-  <span class="lead-duration duration">0.109</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_1_1716368945.html">Searching the employee</a>
-    </div>
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">1.236</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
-
-<div class="brief failed">
-  <span class="keyword indention">Background</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-13" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">user enters valid email and valid password</span>
-
-  <span class="lead-duration duration">0.132</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">click on login button</span>
-
-  <span class="lead-duration duration">1.103</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When failed">
-  <span class="keyword indention">When</span>
-  <span class="name">user clicks in PIM option</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>java.lang.NullPointerException</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>java.lang.NullPointerException
-	at Utils.CommonMethods.doClick(CommonMethods.java:55)
-	at Steps.AddEmployee.user_clicks_in_pim_option(AddEmployee.java:17)
-	at &#10045;.user clicks in PIM option(file:///Users/aipa/IdeaProjects/MyFirstFramework/src/test/resources/Features/EmployeeSearch.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_1_1716368945.html">Searching the employee</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_808985818.html">@jobTitle</a>
-</div>
-
-
-  <span class="lead-duration duration">0.000</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Search Employee by Job Title</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-16" class="collapse collapsable-details  in ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-17">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-17" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">Steps.Hooks.PreConditions()</span>
-
-  <span class="lead-duration duration">1.552</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-18">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-18" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-When skipped">
-  <span class="keyword indention">When</span>
-  <span class="name">user select Job Title</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">Clicks on search button</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">user see employee information is displayed</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-19">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-19" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">Steps.Hooks.postConditions()</span>
-
-  <span class="lead-duration duration">0.160</span>
-
-          </div>
-
-
-
-
-
-
 
         </div>
     </div>

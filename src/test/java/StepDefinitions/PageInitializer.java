@@ -7,7 +7,7 @@ public class PageInitializer {
 
     // make it global
     public static LoginPage login;
-    public static AddEmployeePage addEmployeePage;
+    public static AddEmployeePage  addEmployeePage;
     public static void initializePageObjects() {
 
         // initializing login page
